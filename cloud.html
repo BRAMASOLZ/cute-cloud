@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送给温柔的云云</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffe6f2;
+            color: #333;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+            color: #ff6f91;
+            font-family: 'Brush Script MT', cursive;
+        }
+
+        .photo-container {
+            margin-top: 20px;
+            position: relative;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            animation: rotateImage 10s infinite linear;
+        }
+
+        /* 渐入动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* 图片旋转动画 */
+        @keyframes rotateImage {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .hearts {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6f91;
+            opacity: 0.8;
+            transform: rotate(45deg);
+            animation: float 5s infinite ease-in-out;
+        }
+
+        .heart::before, .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #ff6f91;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(45deg);
+            }
+            100% {
+                transform: translateY(0) rotate(45deg);
+            }
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-duration: 4s;
+        }
+
+        .heart:nth-child(2) {
+            left: 25%;
+            animation-duration: 6s;
+        }
+
+        .heart:nth-child(3) {
+            left: 40%;
+            animation-duration: 5s;
+        }
+
+        .heart:nth-child(4) {
+            left: 55%;
+            animation-duration: 7s;
+        }
+
+        .heart:nth-child(5) {
+            left: 70%;
+            animation-duration: 6s;
+        }
+
+        .heart:nth-child(6) {
+            left: 85%;
+            animation-duration: 4s;
+        }
+    </style>
+</head>
+<body>
+    <h1> 送给温柔的云云</h1>
+    <div class="photo-container">
+        <img src="C:\Users\13243\Desktop\微信图片_20240922095301.jpg" alt="高止云">
+    </div>
+
+    <div class="hearts">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+    </div>
+</body>
+</html>
